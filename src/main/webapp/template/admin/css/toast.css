@@ -1,0 +1,114 @@
+@charset "UTF-8";
+a, abbr, acronym, address, applet, article, aside, audio,
+b, blockquote, big, body,
+center, canvas, caption, cite, code, command,
+datalist, dd, del, details, dfn, dl, div, dt, 
+em, embed,
+fieldset, figcaption, figure, font, footer, form, 
+h1, h2, h3, h4, h5, h6, header, hgroup, html,
+i, iframe, img, ins,
+kbd, 
+keygen,
+label, legend, li, 
+meter,
+nav,
+object, ol, output,
+p, pre, progress,
+q, 
+s, samp, section, small, span, source, strike, strong, sub, sup,
+table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+u, ul, 
+var{
+    background: transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+    vertical-align: top; 
+	text-decoration: none;
+}
+/* toast */
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index:1000;
+}
+.toast {
+   display: flex;
+   align-items: center;
+   background-color: #ebe5e5;
+   border-radius: 2px;
+   padding: 20px 0;
+   min-width: 400px;
+   max-width: 450px;
+   border-left: 4px solid;
+   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+   margin-top: 20px;
+   animation: slideInLeftAlert ease .3s, fadeOut linear 1s 1s forwards;
+}
+
+@keyframes slideInLeftAlert {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+.toast-icon, .toast-close {
+    padding: 0 16px;
+    
+}
+.toast-icon {
+    font-size: 24px;
+}
+.toast-body {
+    flex-grow: 1;
+}
+.toast-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+.toast-close i:hover {
+    cursor: pointer;
+}
+.toast-mess {
+    font-size: 14px;
+    color: #888;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+.toast-close {
+    font-size: 20px;
+    color: rgba(0, 0 , 0, 0.5);
+
+}
+.toast-danger{
+    border-color: #ff623d;
+} 
+.toast-danger .toast-icon i {
+ 	color: #ff623d;
+}
+.toast-success {
+    border-color: #47d864;
+} 
+.toast-success .toast-icon i{
+    color: #47d864;
+} 
+.none {
+	display: none;
+}
+
+/* toast */
